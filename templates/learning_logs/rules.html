@@ -1,0 +1,12 @@
+{% extends 'learning_logs/base.html' %}
+
+{% block content %}
+    <h1>Правила сайту:</h1>
+    <ul>
+        {% for rule in rules %}
+            <li>{{ rule.rule }} - Час блокування: {{ rule.ban }}</li>
+        {% empty %}
+            <li>Тут ще не має правил!</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
